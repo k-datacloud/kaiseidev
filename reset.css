@@ -1,0 +1,48 @@
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li,
+a,
+dl,
+dt,
+dd,
+table,
+tr,
+th,
+td,
+span {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-decoration: none;
+    list-style: none;
+    line-height: 1;
+    outline: none;
+    box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+    background-color: unset;
+    border: none;
+    outline: none;
+}
+
+div,
+header,
+footer,
+section,
+article,
+figure,
+picture {
+    box-sizing: border-box;
+    margin: 0;
+    display: block;
+    padding: 0;
+}
