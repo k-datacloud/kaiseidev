@@ -62,17 +62,15 @@
 //     })
 // })
 
-const toggleBtns = document.querySelectorAll(".toggle-button");
 const answers = document.querySelectorAll(".answer");
-const quesionts = document.querySelectorAll(".question");
+const quesionts = document.querySelectorAll(".question-wrapper");
 const items = document.querySelectorAll(".toggle-button__item");
 const closes = document.querySelectorAll(".close");
-console.log(toggleBtns);
 
-toggleBtns.forEach((toggleBtn) => {
-    toggleBtn.addEventListener("click", () => {
-        for (let i = 0; i < toggleBtns.length; i++) {
-            if (toggleBtns[i] == toggleBtn) {
+quesionts.forEach((question) => {
+    question.addEventListener("click", () => {
+        for (let i = 0; i < quesionts.length; i++) {
+            if (quesionts[i] == question) {
                 answers[i].classList.toggle("showText");
                 items[i].classList.toggle("show");
                 closes[i].classList.toggle("hide");
@@ -83,4 +81,28 @@ toggleBtns.forEach((toggleBtn) => {
             }
         }
     })
+})
+
+
+const backTop = document.querySelector(".backTop");
+backTop.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+})
+
+
+const footer = document.querySelector(".footer");
+const footerText = document.querySelector(".footer__text");
+console.log(footerText);
+
+window.addEventListener("scroll", () => {
+    const scroll = window.scrollY;
+    console.log(scroll);
+    
+    if (scroll >= 2100) {
+        footerText.classList.add("show");
+    }
 })
