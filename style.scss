@@ -230,7 +230,8 @@ body {
         border-radius: 20px;
         width: 180px;
         height: 50px;
-        box-shadow: 0 0 4px 0px rgba($color: #000000, $alpha: .5);
+        scale: 1;
+        transition: scale 0.3s ease-in-out;
 
         @include respond-to("large") {
             width: 220px;
@@ -238,7 +239,7 @@ body {
         }
 
         &:hover {
-            opacity: 0.8;
+            scale: 1.1;
         }
     }
 
@@ -266,7 +267,7 @@ body {
 
 .section {
     padding: 0 20px;
-    margin-bottom: 40px;
+    margin-bottom: 64px;
 
     @include respond-to("large") {
         padding: 0;
@@ -321,13 +322,14 @@ body {
 
     .flex-wrapper-pc {
 
+        &:first-child {
+            margin-bottom: 24px;
+        }
+
+
         @include respond-to("large") {
             display: flex;
             gap: 40px;
-
-            &:first-child {
-                margin-bottom: 40px;
-            }
         }
     }
 
@@ -378,12 +380,13 @@ body {
     background-color: #202020;
     padding: 40px 20px;
     border-radius: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 64px;
 
     @include respond-to("large") {
         width: 100%;
         max-width: none;
         margin-bottom: 120px;
+        padding: 64px 0;
     }
 
     .flex-wrapper-pc {
@@ -464,11 +467,38 @@ body {
     padding: 0;
     margin-bottom: 64px;
 
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
     &__title {
         padding: 0 20px;
 
         @include respond-to("large") {
             margin-bottom: 48px;
+        }
+    }
+
+    .language-switch {
+        display: flex;
+        cursor: pointer;
+
+        .lang-option {
+            cursor: pointer;
+            @include Inter(400, 18px);
+            text-transform: capitalize;
+        }
+
+        @include respond-to("large") {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+            
+            &:hover {
+                opacity: 0.3;
+            }
         }
     }
     
@@ -494,7 +524,11 @@ body {
         align-items: center;
         cursor: pointer;
         padding: 16px 0;
+        gap: 16px;
 
+        @include respond-to("medium") {
+            gap: auto;
+        }
         @include respond-to("large") {
             padding: 24px 40px;
         }
@@ -520,6 +554,7 @@ body {
             height: 1px;
             background-color: #202020;
             display: none;
+            transition: all 0.5s ease-in-out;
         }
 
         .show {
@@ -544,10 +579,18 @@ body {
 
     .question {
         @include Noto(300, 14px);
+        line-height: 180%;
+        width: 100%;
 
         @include respond-to("large") {
             @include Noto(300, 16px);
         }
+    }
+
+    .question--en {
+        @include Inter(300, 16px);
+        letter-spacing: 0;
+        text-align: start;
     }
 
     .scale {
@@ -556,10 +599,14 @@ body {
     }
 
     .answer {
-        display: none;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
         @include Noto(400, 14px);
         line-height: 180%;
-        margin-bottom: 24px;
+        margin-bottom: 0px;
+        text-align: justify;
+        transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out, margin-bottom 0.5s ease-in-out;
 
         @include respond-to("large") {
             font-size: 16px;
@@ -567,21 +614,29 @@ body {
         }
     }
 
-    .showText {
-        display: block;
-        animation: show 0.5s ease-in-out forwards;
+    .answer--en {
+        @include Inter(300, 16px);
+        letter-spacing: 0;
+        text-align: start;
+    }
 
-        @keyframes show {
-            0% {
-                opacity: 0;
-                transform: translateY(-40px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0px);
-            }
+    .showText {
+        height: auto;
+        opacity: 1;
+        margin-bottom: 24px;
+        // animation: show .5s ease-in-out forwards;
+
+        // @keyframes show {
+        //     0% {
+        //         opacity: 0;
+        //         transform: translateY(40px);
+        //     }
+        //     100% {
+        //         opacity: 1;
+        //         transform: translateY(0px);
+        //     }
             
-        }
+        // }
     }
 }
 
@@ -655,4 +710,9 @@ body {
         margin-bottom: 48px;
     }
 
+}
+
+.engbtn {
+    font-size: 20px;
+    color: #202020;
 }

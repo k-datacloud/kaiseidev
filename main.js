@@ -31,42 +31,12 @@
 //     }
 // })
 
-// const sidebar = document.querySelector(".sidebar-index");
-// const list = document.querySelector(".sidebar-index__list");
-// const items = document.querySelectorAll(".sidebar-index__item");
-// window.addEventListener("scroll", () => {
-//     const scroll = window.scrollY;
-//     console.log(scroll);
-//     let index = -1;
-    
-//     if ( scroll > 200 && scroll <= 680 ) {
-//         index = 0;
-//         // service
-//     }
-//     else if ( scroll > 680 && scroll <= 1050 ) {
-//         index = 1;
-//         // work
-//     }
-//     else if ( 1050  <= scroll ) {
-//         index = 2;
-//         // about
-//     }
 
-//     items.forEach((item, i) => {
-//         if( i == index ) {
-//             item.classList.add("showup");
-//         }
-//         else {
-//             item.classList.remove("showup");
-//         }
-//     })
-// })
-
+// accordion, translation-button
 const answers = document.querySelectorAll(".answer");
 const quesionts = document.querySelectorAll(".question-wrapper");
 const items = document.querySelectorAll(".toggle-button__item");
 const closes = document.querySelectorAll(".close");
-
 quesionts.forEach((question) => {
     question.addEventListener("click", () => {
         for (let i = 0; i < quesionts.length; i++) {
@@ -83,6 +53,37 @@ quesionts.forEach((question) => {
     })
 })
 
+const langSwitchBtn = document.querySelector(".language-switch");
+const questionTexts = document.querySelector(".question");
+
+console.log(questionTexts);
+
+langSwitchBtn.addEventListener("click", () => {
+    console.log(questionTexts.textContent);
+    console.log(questionTexts.getAttribute("data-jp"));
+    
+    
+
+    if (questionTexts.textContent.trim() === questionTexts.getAttribute("data-jp")) {
+        questionTexts.classList.add("question--en");
+        answers[0].classList.add("answer--en");
+        questionTexts.textContent = questionTexts.getAttribute("data-en");
+        answers[0].textContent = answers[0].getAttribute("data-en");
+    } else {
+        questionTexts.textContent = questionTexts.getAttribute("data-jp");
+        answers[0].textContent = answers[0].getAttribute("data-jp");
+    }
+    
+    // questionTexts.forEach((questionText) => {
+    //     if ( questionText.textContent == questionText.getAttribute("data-jp") ) {
+    //         questionText.textContent = questionText.getAttribute("data-en");
+    //     } else {
+    //         console.log("else");
+            
+    //     }
+    // })
+})
+
 
 const backTop = document.querySelector(".backTop");
 backTop.addEventListener("click", (e) => {
@@ -94,15 +95,18 @@ backTop.addEventListener("click", (e) => {
 })
 
 
-const footer = document.querySelector(".footer");
+
+// footerText show
 const footerText = document.querySelector(".footer__text");
-console.log(footerText);
+const windowHeight = window.innerHeight;
 
 window.addEventListener("scroll", () => {
-    const scroll = window.scrollY;
-    console.log(scroll);
+    const footerTextHeight = footerText.clientHeight;
+    const footerTextPosition = footerText.getBoundingClientRect().top;
+    console.log(windowHeight);
+    console.log(footerTextPosition - footerTextHeight);
     
-    if (scroll >= 2100) {
+    if ( ( footerTextPosition - footerTextHeight ) < ( windowHeight - 40 ) ) {
         footerText.classList.add("show");
     }
 })

@@ -199,7 +199,8 @@ body {
   border-radius: 20px;
   width: 180px;
   height: 50px;
-  box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.5);
+  scale: 1;
+  transition: scale 0.3s ease-in-out;
 }
 @media (min-width: 960px) {
   .hero__btn {
@@ -208,7 +209,7 @@ body {
   }
 }
 .hero__btn:hover {
-  opacity: 0.8;
+  scale: 1.1;
 }
 .hero__link {
   display: block;
@@ -237,7 +238,7 @@ body {
 
 .section {
   padding: 0 20px;
-  margin-bottom: 40px;
+  margin-bottom: 64px;
 }
 @media (min-width: 960px) {
   .section {
@@ -308,13 +309,13 @@ body {
     font-size: 100px;
   }
 }
+.service .flex-wrapper-pc:first-child {
+  margin-bottom: 24px;
+}
 @media (min-width: 960px) {
   .service .flex-wrapper-pc {
     display: flex;
     gap: 40px;
-  }
-  .service .flex-wrapper-pc:first-child {
-    margin-bottom: 40px;
   }
 }
 .service .flex-container {
@@ -387,13 +388,14 @@ body {
   background-color: #202020;
   padding: 40px 20px;
   border-radius: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 64px;
 }
 @media (min-width: 960px) {
   .about {
     width: 100%;
     max-width: none;
     margin-bottom: 120px;
+    padding: 64px 0;
   }
 }
 @media (min-width: 960px) {
@@ -489,12 +491,40 @@ body {
   padding: 0;
   margin-bottom: 64px;
 }
+.qna .flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
 .qna__title {
   padding: 0 20px;
 }
 @media (min-width: 960px) {
   .qna__title {
     margin-bottom: 48px;
+  }
+}
+.qna .language-switch {
+  display: flex;
+  cursor: pointer;
+}
+.qna .language-switch .lang-option {
+  cursor: pointer;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 18px;
+  color: #202020;
+  text-transform: capitalize;
+}
+@media (min-width: 960px) {
+  .qna .language-switch {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .qna .language-switch:hover {
+    opacity: 0.3;
   }
 }
 .qna .accordion {
@@ -518,6 +548,12 @@ body {
   align-items: center;
   cursor: pointer;
   padding: 16px 0;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .qna .question-wrapper {
+    gap: auto;
+  }
 }
 @media (min-width: 960px) {
   .qna .question-wrapper {
@@ -542,6 +578,7 @@ body {
   height: 1px;
   background-color: #202020;
   display: none;
+  transition: all 0.5s ease-in-out;
 }
 .qna .toggle-button .show {
   display: block;
@@ -553,6 +590,8 @@ body {
   font-size: 14px;
   letter-spacing: 1.4px;
   text-align: justify;
+  line-height: 180%;
+  width: 100%;
 }
 @media (min-width: 960px) {
   .qna .question {
@@ -564,12 +603,23 @@ body {
     text-align: justify;
   }
 }
+.qna .question--en {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 16px;
+  color: #202020;
+  letter-spacing: 0;
+  text-align: start;
+}
 .qna .scale {
   font-size: 12px;
   transition: all 0.5s ease-in-out;
 }
 .qna .answer {
-  display: none;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
   font-family: "Noto Sans JP", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -577,7 +627,9 @@ body {
   letter-spacing: 1.4px;
   text-align: justify;
   line-height: 180%;
-  margin-bottom: 24px;
+  margin-bottom: 0px;
+  text-align: justify;
+  transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out, margin-bottom 0.5s ease-in-out;
 }
 @media (min-width: 960px) {
   .qna .answer {
@@ -585,19 +637,19 @@ body {
     padding: 0 40px;
   }
 }
-.qna .showText {
-  display: block;
-  animation: show 0.5s ease-in-out forwards;
+.qna .answer--en {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 16px;
+  color: #202020;
+  letter-spacing: 0;
+  text-align: start;
 }
-@keyframes show {
-  0% {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
+.qna .showText {
+  height: auto;
+  opacity: 1;
+  margin-bottom: 24px;
 }
 
 .footer {
@@ -670,4 +722,9 @@ body {
   height: 1px;
   background-color: #ffffff;
   margin-bottom: 48px;
+}
+
+.engbtn {
+  font-size: 20px;
+  color: #202020;
 }/*# sourceMappingURL=style.css.map */
