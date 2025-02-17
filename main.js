@@ -37,11 +37,9 @@ quesionts.forEach((question) => {
     })
 })
 
+// exchange language
 const langSwitchBtn = document.querySelector(".language-switch");
 const questionTexts = document.querySelector(".question");
-
-console.log(questionTexts);
-
 langSwitchBtn.addEventListener("click", () => {
     console.log(questionTexts.textContent);
     console.log(questionTexts.getAttribute("data-jp"));
@@ -69,28 +67,61 @@ langSwitchBtn.addEventListener("click", () => {
 })
 
 
+
+
 const backTop = document.querySelector(".backTop");
-backTop.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-})
+// backTop.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     window.scrollTo({
+//         top: 0,
+//         behavior: 'smooth'
+//     });
+// })
 
 
 
 // footerText show
 const footerText = document.querySelector(".footer__text");
 const windowHeight = window.innerHeight;
+const footerTextHeight = footerText.clientHeight;
+const quarterHeight = footerTextHeight / 3;
 
 window.addEventListener("scroll", () => {
-    const footerTextHeight = footerText.clientHeight;
     const footerTextPosition = footerText.getBoundingClientRect().top;
-    console.log(windowHeight);
-    console.log(footerTextPosition - footerTextHeight);
+    console.log(footerTextPosition);
+    console.log(windowHeight-quarterHeight);
     
-    if ( ( footerTextPosition - footerTextHeight ) < ( windowHeight - 60 ) ) {
+    
+    if ( ( footerTextPosition - footerTextHeight ) < ( windowHeight - quarterHeight ) ) {
         footerText.classList.add("show");
     }
+})
+
+// smooth scroll
+function smoothScroll(target, duration) {
+    const startPosition = window.scrollY;
+    const distance = target - startPosition;
+    let start = null;
+
+    function animation(currentTime) {
+        if (start === null) {
+            start = currentTime;
+        }
+        const timeElapsed = currentTime - start;
+        const run = Math.min(1, timeElapsed / duration);
+        window.scrollTo(0, startPosition + distance * easeInOutQuad(run));
+        if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+        }
+    }
+
+    function easeInOutQuad(t) {
+        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    }
+    requestAnimationFrame(animation);
+}
+
+backTop.addEventListener("click", (e) => {
+    e.preventDefault();
+    smoothScroll(0, 1500);
 })

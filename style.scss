@@ -38,51 +38,6 @@ body {
     background-color: #FEFBF6;
 }
 
-// .divider {
-
-//     img {
-//         width: 100%;
-//         height: 1px;
-//     }
-// }
-
-.sidebar-index {
-    display: none;
-
-    @include respond-to("large") {
-        display: block;
-        position: fixed;
-        top: 20%;
-        right: 0px;
-        transform: translateY(-50%);
-        z-index: 1;
-
-        &__list {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-            padding-right: 30px;
-        }
-
-        &__item {
-            @include Inter(400, 28px);
-            color: #9e9e9e;
-            text-transform: uppercase;
-            transition: all 0.5s ease-in-out;
-            letter-spacing: 2px;
-            padding-right: 30px;
-        }
-
-        .showup {
-            color: #333333;
-            transition: all 0.5s ease-in-out;
-            transform: scale(1.2);
-            @include Inter(400, 50px);
-            letter-spacing: 2px;
-        }
-    }
-}
-
 .header {
     width: 100%;
     display: flex;
@@ -124,6 +79,7 @@ body {
         top: 20px;
         right: 20px;
         z-index: 999;
+
 
         @include respond-to("large") {
             display: none;

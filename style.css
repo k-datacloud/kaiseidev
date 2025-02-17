@@ -2,49 +2,6 @@ body {
   background-color: #FEFBF6;
 }
 
-.sidebar-index {
-  display: none;
-}
-@media (min-width: 960px) {
-  .sidebar-index {
-    display: block;
-    position: fixed;
-    top: 20%;
-    right: 0px;
-    transform: translateY(-50%);
-    z-index: 1;
-  }
-  .sidebar-index__list {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    padding-right: 30px;
-  }
-  .sidebar-index__item {
-    font-family: "Inter", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-size: 28px;
-    color: #202020;
-    color: #9e9e9e;
-    text-transform: uppercase;
-    transition: all 0.5s ease-in-out;
-    letter-spacing: 2px;
-    padding-right: 30px;
-  }
-  .sidebar-index .showup {
-    color: #333333;
-    transition: all 0.5s ease-in-out;
-    transform: scale(1.2);
-    font-family: "Inter", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-size: 50px;
-    color: #202020;
-    letter-spacing: 2px;
-  }
-}
-
 .header {
   width: 100%;
   display: flex;
