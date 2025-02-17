@@ -49,7 +49,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 32px 20px;
   align-items: center;
   margin-bottom: 40px;
 }
@@ -61,6 +61,17 @@ body {
     padding: 32px 0;
   }
 }
+.header .flex-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .flex-container .menu-icon {
+  position: relative;
+  z-index: 999;
+  width: 30px;
+}
 .header__logo {
   font-family: "Inter", serif;
   font-optical-sizing: auto;
@@ -71,6 +82,17 @@ body {
 @media (min-width: 960px) {
   .header__logo {
     font-size: 24px;
+  }
+}
+.header__icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+@media (min-width: 960px) {
+  .header__icon {
+    display: none;
   }
 }
 .header__menu {
@@ -89,15 +111,62 @@ body {
 .header__menu img {
   width: 30px;
 }
-.header__menu-pc {
+.header__nav {
+  width: 100%;
+  height: 100vh;
+  background-color: #FEFBF6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 990;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 100px 20px 0;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+@media (min-width: 960px) {
+  .header__nav {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    position: static;
+    display: block;
+    transform: translateY(0);
+    padding: 0;
+  }
+}
+.header__menu--sp {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media (min-width: 960px) {
+  .header__menu--sp {
+    display: none;
+  }
+}
+.header__menu--sp .menu-link {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 24px;
+  color: #202020;
+  text-transform: uppercase;
+}
+.header .show {
+  transform: translateY(0%);
+}
+.header__menu--pc {
   display: none;
 }
 @media (min-width: 960px) {
-  .header__menu-pc {
+  .header__menu--pc {
     display: flex;
     gap: 32px;
   }
-  .header__menu-pc .menu-link {
+  .header__menu--pc .menu-link {
     font-family: "Inter", serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -106,7 +175,7 @@ body {
     text-transform: uppercase;
     position: relative;
   }
-  .header__menu-pc .menu-link:after {
+  .header__menu--pc .menu-link:after {
     content: "";
     position: absolute;
     left: 0;
@@ -118,7 +187,7 @@ body {
     transform-origin: left;
     transition: transform 0.3s ease-in-out;
   }
-  .header__menu-pc .menu-link:hover:after {
+  .header__menu--pc .menu-link:hover:after {
     transform: scaleX(1);
     transition: transform 0.3s ease-in-out;
   }

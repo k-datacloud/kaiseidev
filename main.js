@@ -1,36 +1,20 @@
-// const menu = ["explore","what", "how", "who"];
-// const link = document.querySelector(".sp__menu");
-// window.addEventListener("load", () => {
-//     link.innerHTML = menu[0];
-// })
-// window.addEventListener("scroll", () => {
-//     const scroll = window.scrollY;
-//     console.log(scroll);
-    
-//     let index = 0;
-//     if ( scroll >= 0 && scroll <= 80 ) {
-//         index = 0;
-//     }
-//     else if ( scroll > 80 && scroll <= 580 ) {
-//         index = 1;
-//     }
-//     else if ( scroll > 580 && scroll <= 950 ) {
-//         index = 2;
-//     }
-//     else if ( 950  <= scroll ) {
-//         index = 3;
-//     }
+// header nav
 
-//     if( link.innerHTML != menu[index] ) {
-//         link.classList.add("fade-out");
-//         setTimeout(() => {
-//             link.innerHTML = menu[index];
-//             link.classList.remove("fade-out");
-//             link.classList.add("fade-in");
-//         }, 800);
-//     }
-// })
+const nav = document.querySelector(".header__nav");
+const iconBtn = document.querySelector(".header__icon");
+const menuImage = document.querySelector(".header__icon img");
+console.log(menuImage);
 
+
+iconBtn.addEventListener("click", () => {
+    if ( menuImage.getAttribute("src") === "assets/close.svg" ) {
+        nav.classList.add("show");
+        menuImage.setAttribute("src", "assets/open.svg");
+    } else if ( menuImage.getAttribute("src") === "assets/open.svg" ) {
+        nav.classList.remove("show");
+        menuImage.setAttribute("src", "assets/close.svg");
+    }
+})
 
 // accordion, translation-button
 const answers = document.querySelectorAll(".answer");
@@ -106,7 +90,7 @@ window.addEventListener("scroll", () => {
     console.log(windowHeight);
     console.log(footerTextPosition - footerTextHeight);
     
-    if ( ( footerTextPosition - footerTextHeight ) < ( windowHeight - 40 ) ) {
+    if ( ( footerTextPosition - footerTextHeight ) < ( windowHeight - 60 ) ) {
         footerText.classList.add("show");
     }
 })

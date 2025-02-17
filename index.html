@@ -12,12 +12,22 @@
 </head>
 <body>
     <header class="header">
-        <div class="header__logo">KAISEIDEV</div>
+        <div class="flex-container">
+            <h1 class="header__logo">KAISEIDEV</h1>
+            <div class="header__icon">
+                <img src="assets/close.svg" data-open="assets/open.svg" data-close="assets/close.svg" alt="menuicon" class="menu-icon">
+            </div>
+        </div>
         <nav class="header__nav">
-            <ul class="header__menu">
-                <li class="menu-item"><a class="menu-link" href=""><img src="assets/Vector.png" alt=""></a></li>
+            <ul class="header__menu--sp">
+                <li class="menu-item"><a class="menu-link" href="">about</a></li>
+                <li class="menu-item"><a class="menu-link" href="">service</a></li>
+                <li class="menu-item"><a class="menu-link" href="">q&a</a></li>
+                <li class="menu-item"><a class="menu-link" href="">contact</a></li>
+                <li class="menu-item"><a class="menu-link" href="https://kaiseidigi.vercel.app" target="_blank">view my work</a></li>
+                <li class="menu-item"><a class="menu-link" href="https://www.linkedin.com/in/s-kaisei/" target="_blank">LinkedIn</a></li>
             </ul>
-            <ul class="header__menu-pc">
+            <ul class="header__menu--pc">
                 <li class="menu-item"><a class="menu-link" href="">about</a></li>
                 <li class="menu-item"><a class="menu-link" href="">service</a></li>
                 <li class="menu-item"><a class="menu-link" href="">q&a</a></li>
@@ -25,14 +35,6 @@
             </ul>    
         </nav>    
     </header>
-
-    <!-- <div class="sidebar-index">
-        <ul class="sidebar-index__list">
-            <li class="sidebar-index__item">01.service</li>
-            <li class="sidebar-index__item">02.work</li>
-            <li class="sidebar-index__item">03.about</li>
-        </ul>
-    </div> -->
     
     <section class="hero">
         <div class="divider">
@@ -84,9 +86,6 @@
                     We research, prototype, and refine each project to ensure the best results.
                 </p>
                 <p class="flex-container__link">view my portfolio</p>
-                <!-- <p class="flex-container__text">
-                    <a class="flex-container__email" href="">k25ts09@outlook.jp</a>
-                </p> -->
             </div>
         </div>
     </section>
@@ -105,7 +104,7 @@
                     </p>
                     <div class="toggle-button">
                         <span class="toggle-button__item"></span>
-                        <img class="close" src="assets/Vector.png" alt="">
+                        <img class="close" src="assets/close.svg" alt="crossIcon">
                     </div>
                 </div>
                 <p class="answer" data-jp="コーポレートサイト、ランディングページ、個人サイトやポートフォリオサイトなどの開発に対応しています。" data-en="I can develop corporate sites, landing pages, personal sites, and portfolio sites.">
@@ -118,7 +117,7 @@
                     <p class="question">プロジェクトの進め方はどうなっていますか。</p>
                     <div class="toggle-button">
                         <span class="toggle-button__item"></span>
-                        <img class="close" src="assets/Vector.png" alt="">
+                        <img class="close" src="assets/close.svg" alt="crossIcon">
                     </div>
                 </div>
                 <p class="answer">
@@ -131,7 +130,7 @@
                     <p class="question">料金体系はどのようになっていますか。</p>
                     <div class="toggle-button">
                         <span class="toggle-button__item"></span>
-                        <img class="close" src="assets/Vector.png" alt="">
+                        <img class="close" src="assets/close.svg" alt="crossIcon">
                     </div>
                 </div>
                 <p class="answer">
@@ -144,7 +143,7 @@
                     <p class="question">納期はどのくらいかかりますか。</p>
                     <div class="toggle-button">
                         <span class="toggle-button__item"></span>
-                        <img class="close" src="assets/Vector.png" alt="">
+                        <img class="close" src="assets/close.svg" alt="crossIcon">
                     </div>
                 </div>
                 <p class="answer">
@@ -157,7 +156,7 @@
                     <p class="question">納品後のサポートはありますか。</p>
                     <div class="toggle-button">
                         <span class="toggle-button__item"></span>
-                        <img class="close" src="assets/Vector.png" alt="">
+                        <img class="close" src="assets/close.svg" alt="crossIcon">
                     </div>
                 </div>
                 <p class="answer">
