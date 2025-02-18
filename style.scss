@@ -137,6 +137,22 @@ body {
             display: none;
         }
 
+        .menu-item {
+            opacity: 0;
+            transition: opacity ease-in-out;
+        }
+
+        .menu-item--open {
+            opacity: 1;
+            transition-duration: .5s;
+            transition-delay: .5s;
+        }
+
+        .menu-item--close {
+            opacity: 0;
+            transition-duration: .5s;
+        }
+
         .menu-link {
             @include Inter(500, 24px);
             text-transform: uppercase;
@@ -414,8 +430,8 @@ body {
 
 .about {
     background-color: #202020;
-    padding: 40px 20px;
-    border-radius: 20px;
+    padding: 56px 20px;
+    border-radius: 40px;
     margin-bottom: 64px;
 
     @include respond-to("medium") {
@@ -462,7 +478,7 @@ body {
 
         &__text--jp {
             @include Noto(300, 14px);
-            line-height: 240%;
+            line-height: 200%;
             color: #ffffff;
 
             @include respond-to("large") {
@@ -473,7 +489,7 @@ body {
         &__text--en {
             @include Inter(300, 14px);
             color: #ffffff;
-            line-height: 220%;
+            line-height: 200%;
             text-transform: uppercase;
 
             @include respond-to("large") {
@@ -623,7 +639,7 @@ body {
     }
 
     .question {
-        @include Noto(300, 14px);
+        @include Noto(400, 14px);
         line-height: 180%;
         width: 100%;
 
@@ -633,9 +649,10 @@ body {
     }
 
     .question--en {
-        @include Inter(300, 16px);
+        @include Inter(400, 16px);
         letter-spacing: 0;
         text-align: start;
+
     }
 
     .scale {
@@ -660,7 +677,7 @@ body {
     }
 
     .answer--en {
-        @include Inter(300, 16px);
+        @include Inter(400, 16px);
         letter-spacing: 0;
         text-align: start;
     }

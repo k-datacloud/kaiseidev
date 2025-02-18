@@ -108,6 +108,19 @@ body {
     display: none;
   }
 }
+.header__menu--sp .menu-item {
+  opacity: 0;
+  transition: opacity ease-in-out;
+}
+.header__menu--sp .menu-item--open {
+  opacity: 1;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}
+.header__menu--sp .menu-item--close {
+  opacity: 0;
+  transition-duration: 0.5s;
+}
 .header__menu--sp .menu-link {
   font-family: "Inter", serif;
   font-optical-sizing: auto;
@@ -426,8 +439,8 @@ body {
 
 .about {
   background-color: #202020;
-  padding: 40px 20px;
-  border-radius: 20px;
+  padding: 56px 20px;
+  border-radius: 40px;
   margin-bottom: 64px;
 }
 @media (min-width: 768px) {
@@ -480,7 +493,7 @@ body {
   font-size: 14px;
   letter-spacing: 1.4px;
   text-align: justify;
-  line-height: 240%;
+  line-height: 200%;
   color: #ffffff;
 }
 @media (min-width: 1280px) {
@@ -495,7 +508,7 @@ body {
   font-size: 14px;
   color: #202020;
   color: #ffffff;
-  line-height: 220%;
+  line-height: 200%;
   text-transform: uppercase;
 }
 @media (min-width: 1280px) {
@@ -636,7 +649,7 @@ body {
 .qna .question {
   font-family: "Noto Sans JP", serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
   letter-spacing: 1.4px;
   text-align: justify;
@@ -656,7 +669,7 @@ body {
 .qna .question--en {
   font-family: "Inter", serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   color: #202020;
   letter-spacing: 0;
@@ -690,7 +703,7 @@ body {
 .qna .answer--en {
   font-family: "Inter", serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   color: #202020;
   letter-spacing: 0;
