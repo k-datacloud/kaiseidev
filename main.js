@@ -3,9 +3,6 @@
 const nav = document.querySelector(".header__nav");
 const iconBtn = document.querySelector(".header__icon");
 const menuImage = document.querySelector(".header__icon img");
-console.log(menuImage);
-
-
 iconBtn.addEventListener("click", () => {
     if ( menuImage.getAttribute("src") === "assets/close.svg" ) {
         nav.classList.add("show");
@@ -15,6 +12,7 @@ iconBtn.addEventListener("click", () => {
         menuImage.setAttribute("src", "assets/close.svg");
     }
 })
+
 
 // accordion, translation-button
 const answers = document.querySelectorAll(".answer");
@@ -41,10 +39,6 @@ quesionts.forEach((question) => {
 const langSwitchBtn = document.querySelector(".language-switch");
 const questionTexts = document.querySelector(".question");
 langSwitchBtn.addEventListener("click", () => {
-    console.log(questionTexts.textContent);
-    console.log(questionTexts.getAttribute("data-jp"));
-    
-    
 
     if (questionTexts.textContent.trim() === questionTexts.getAttribute("data-jp")) {
         questionTexts.classList.add("question--en");
@@ -66,20 +60,6 @@ langSwitchBtn.addEventListener("click", () => {
     // })
 })
 
-
-
-
-const backTop = document.querySelector(".backTop");
-// backTop.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     window.scrollTo({
-//         top: 0,
-//         behavior: 'smooth'
-//     });
-// })
-
-
-
 // footerText show
 const footerText = document.querySelector(".footer__text");
 const windowHeight = window.innerHeight;
@@ -88,9 +68,6 @@ const quarterHeight = footerTextHeight / 3;
 
 window.addEventListener("scroll", () => {
     const footerTextPosition = footerText.getBoundingClientRect().top;
-    console.log(footerTextPosition);
-    console.log(windowHeight-quarterHeight);
-    
     
     if ( ( footerTextPosition - footerTextHeight ) < ( windowHeight - quarterHeight ) ) {
         footerText.classList.add("show");
@@ -98,6 +75,7 @@ window.addEventListener("scroll", () => {
 })
 
 // smooth scroll
+const backTop = document.querySelector(".backTop");
 function smoothScroll(target, duration) {
     const startPosition = window.scrollY;
     const distance = target - startPosition;
@@ -118,7 +96,8 @@ function smoothScroll(target, duration) {
     function easeInOutQuad(t) {
         return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
     }
-    requestAnimationFrame(animation);
+
+    window.requestAnimationFrame(animation);
 }
 
 backTop.addEventListener("click", (e) => {
