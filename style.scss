@@ -19,7 +19,7 @@
 
 $breakpoints: (
     "medium": 768px,
-    "large": 1280px,
+    "large": 1024px,
 );
 
 @mixin respond-to($breakpoint) {
@@ -44,16 +44,10 @@ body {
     justify-content: space-between;
     padding: 32px 20px;
     align-items: center;
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
 
     @include respond-to("medium") {
         padding: 32px 80px;    
-    }
-
-    @include respond-to("large") {
-        max-width: 1140px;
-        margin: 0 auto;
-        padding: 32px 0;
     }
 
     .flex-container {
