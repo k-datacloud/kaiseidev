@@ -230,8 +230,7 @@ body {
     }
 
     @include respond-to("large") {
-        max-width: 1140px;
-        padding: 0;
+        max-width: 1280px;
         margin: 80px auto;
     }
 
@@ -312,15 +311,6 @@ body {
     padding: 0 20px;
     margin-bottom: 64px;
 
-    @include respond-to("medium") {
-        padding: 0 80px;
-    }
-
-    @include respond-to("large") {
-        max-width: 1140px;
-        margin: 0 auto 80px auto;
-    }
-
     &__title {
         @include Inter(500, 28px);
         margin-bottom: 24px;
@@ -353,6 +343,17 @@ body {
 }
 
 .service {
+    max-width: 1280px;
+
+    @include respond-to("medium") {
+        padding: 0 80px;
+    }
+
+    @include respond-to("large") {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto 120px;
+    }
 
     &__number {
             font-family: "Bebas Neue", serif;
@@ -369,11 +370,12 @@ body {
     .flex-wrapper-pc {
 
         &:first-child {
-            margin-bottom: 24px;
+            margin-bottom: 48px;
         }
 
 
         @include respond-to("large") {
+            max-width: 720px;
             display: flex;
             gap: 40px;
         }
@@ -415,14 +417,10 @@ body {
             }
         }
     }
-
-    @include respond-to("large") {
-        display: flex;
-        gap: 80px;
-    }
 }
 
 .about {
+    width: 100%;
     background-color: #202020;
     padding: 56px 20px;
     border-radius: 40px;
@@ -433,16 +431,13 @@ body {
     }
 
     @include respond-to("large") {
-        width: 100%;
-        max-width: none;
         margin-bottom: 120px;
-        padding: 64px 0px;
     }
 
     .flex-wrapper-pc {
 
         @include respond-to("large") {
-            max-width: 1140px;
+            max-width: 1280px;
             margin: 0 auto;
             display: flex;
             align-items: center;
@@ -519,17 +514,22 @@ body {
 
     @include respond-to("medium") {
         padding: 0 80px;
-    }
-
-    @include respond-to("large") {
-        padding: 0;
+        margin: 0 auto 120px;
+        max-width: 1280px;
     }
 
     .flex-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 20px;
+
+        @include respond-to("large") {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
 
     &__title {
@@ -566,7 +566,7 @@ body {
         padding: 0 20px;
 
         @include respond-to("large") {
-            max-width: 1140px;
+            max-width: 1220px;
             margin: 0 auto;
             padding: 0;
         }
@@ -700,7 +700,13 @@ body {
     background-color: #202020;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    padding-bottom: 40px;
     overflow: hidden;
+
+    @include respond-to("large") {
+        height: 100vh;
+        padding-bottom: 0;
+    }
 
     .footer-menu {
         width: 100%;
@@ -715,9 +721,8 @@ body {
         }
 
         @include respond-to("large") {
-            max-width: 1140px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 96px 0;
             gap: 32px;
         }
 

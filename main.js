@@ -80,6 +80,8 @@ const footerText = document.querySelector(".footer__text");
 const windowHeight = window.innerHeight;
 const footerTextHeight = footerText.clientHeight;
 const quarterHeight = footerTextHeight / 3;
+console.log(windowHeight);
+
 
 window.addEventListener("scroll", () => {
     const footerTextPosition = footerText.getBoundingClientRect().top;
