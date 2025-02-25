@@ -222,6 +222,7 @@ body {
 }
 
 .hero {
+
     padding: 0 20px;
     margin-bottom: 64px;
 
@@ -509,7 +510,7 @@ body {
 }
 
 .qna {
-    padding: 0;
+    padding: 0 20px;
     margin-bottom: 64px;
 
     @include respond-to("medium") {
@@ -563,7 +564,6 @@ body {
     .accordion {
         display: flex;
         flex-direction: column;
-        padding: 0 20px;
 
         @include respond-to("large") {
             max-width: 1220px;
