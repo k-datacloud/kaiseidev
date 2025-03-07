@@ -198,7 +198,7 @@ body {
 @media (min-width: 1024px) {
   .hero {
     max-width: 1280px;
-    margin: 80px auto;
+    margin: 160px auto;
   }
 }
 @media (min-width: 1024px) {
@@ -281,6 +281,12 @@ body {
   padding: 0 20px;
   margin-bottom: 64px;
 }
+@media (min-width: 1024px) {
+  .section {
+    margin-bottom: 196px;
+    padding: 0 80px;
+  }
+}
 .section__title {
   font-family: "Inter", serif;
   font-optical-sizing: auto;
@@ -336,36 +342,32 @@ body {
 }
 @media (min-width: 768px) {
   .service {
-    padding: 0 80px;
+    margin: 0 auto 120px;
   }
 }
 @media (min-width: 1024px) {
   .service {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto 120px;
-  }
-}
-.service__number {
-  font-family: "Bebas Neue", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 60px;
-  color: #ececec;
-}
-@media (min-width: 1024px) {
-  .service__number {
-    font-size: 100px;
+    margin: 0 auto 196px;
   }
 }
 .service .flex-wrapper-pc:first-child {
   margin-bottom: 48px;
 }
 @media (min-width: 1024px) {
+  .service .flex-wrapper-pc:first-child {
+    margin-bottom: 240px;
+  }
+}
+@media (min-width: 1024px) {
   .service .flex-wrapper-pc {
-    max-width: 720px;
-    display: flex;
-    gap: 40px;
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: 360px 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .service__title {
+    margin-bottom: 160px;
   }
 }
 .service .flex-container {
@@ -375,7 +377,7 @@ body {
 }
 @media (min-width: 1024px) {
   .service .flex-container {
-    gap: 24px;
+    justify-content: space-between;
   }
 }
 .service .flex-container__title {
@@ -384,10 +386,12 @@ body {
   font-weight: 400;
   font-size: 24px;
   color: #202020;
+  text-wrap: nowrap;
 }
 @media (min-width: 1024px) {
   .service .flex-container__title {
     font-size: 32px;
+    min-width: 12ch;
   }
 }
 .service .flex-container__text--jp {
@@ -437,12 +441,9 @@ body {
 }
 @media (min-width: 768px) {
   .about {
-    padding: 64px 80px;
-  }
-}
-@media (min-width: 1024px) {
-  .about {
-    margin-bottom: 120px;
+    margin: 0 auto 196px;
+    max-width: 1280px;
+    padding: 56px 80px;
   }
 }
 @media (min-width: 1024px) {
@@ -541,7 +542,7 @@ body {
 @media (min-width: 768px) {
   .qna {
     padding: 0 80px;
-    margin: 0 auto 120px;
+    margin: 0 auto 196px;
     max-width: 1280px;
   }
 }
