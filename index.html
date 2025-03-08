@@ -52,7 +52,8 @@
     </section>
     
     <section class="section service">
-        <h2 class="section__title service__title">service</h2>
+        <div class="service__wrapper">
+            <h2 class="section__title service__title">service</h2>
         <div class="section__content">
             <div class="flex-wrapper-pc">
                     <h3 class="flex-container__title">WEB DEVELOPMENT</h3>
@@ -69,98 +70,100 @@
                     </div>
             </div>
         </div>
+        </div>
     </section>
     
     <section class="section about">
-        <div class="flex-wrapper-pc">
-            <h2 class="section__title about__title">about</h2>
-            <div class="flex-container">
-                <p class="flex-container__text flex-container__text--jp">
-                    私たちは、革新的で効果的なデジタルソリューションを生み出すことに情熱を注ぐデザイナーと開発者のチームです。
-                    デザインとテクノロジーを通じて、アイデアを形にすることを使命としています。
-                </p>
-                <p class="flex-container__text flex-container__text--en">
-                    I'm web developer and designer with a passion for creating simple, modern design and making dynamic animations.
-                </p>
+        <div class="about__wrapper">
+            <h2 class="about__title">About Me</h2>
+            <div class="grid-container about__bio">
+                <p class="about__text">I’m kaisei sadatoki, a 22 year old web developer designer based in Hyogo, Japan.</p>
+                <p class="about__text">I love design that is simple, modern, and dynamic in typography. My design motto is to start with simplicity—black and white.</p>
+                <p class="about__text">A simple design may appear effortless, but achieving true simplicity requires careful consideration of what is unnecessary. </p>
+                <a class="about__link flex-container" target="_blank" href="https://kaiseidigi.vercel.app">Visit My Portfolio
+                    <span class="about__icon"><img src="assets/Arrow 4.svg" alt="arrow icon"></span>
+                </a>
             </div>
         </div>
     </section>
     
     <section class="section qna">
-        <div class="flex-container">
-            <h2 class="section__title">Q&A</h2>
-            <p class="language-switch"><span class="lang-option">En</span>/<span class="lang-option">Ja</span></p>
-        </div>
-        <div class="accordion">
-            <div class="accordion-item">
-                <div class="divider"></div>
-                <div class="question-wrapper">
-                    <p class="question" data-jp="どのような種類のWebサイトの開発が可能ですか" data-en="What kind of web site can you develop?">どのような種類のWebサイトの開発が可能ですか
-
+        <div class="qna__wrapper">
+            <div class="flex-container">
+                <h2 class="section__title qna__title">Q&A</h2>
+                <p class="language-switch"><span class="lang-option">En</span>/<span class="lang-option">Ja</span></p>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="divider"></div>
+                    <div class="question-wrapper">
+                        <p class="question" data-jp="どのような種類のWebサイトの開発が可能ですか" data-en="What kind of web site can you develop?">どのような種類のWebサイトの開発が可能ですか
+    
+                        </p>
+                        <div class="toggle-button">
+                            <span class="toggle-button__item"></span>
+                            <img class="close" src="assets/close.svg" alt="crossIcon">
+                        </div>
+                    </div>
+                    <p class="answer" data-jp="コーポレートサイト、ランディングページ、個人サイトやポートフォリオサイトなどの開発に対応しています。" data-en="I can develop corporate sites, landing pages, personal sites, and portfolio sites.">
+                        コーポレートサイト、ランディングページ、個人サイトやポートフォリオサイトなどの開発に対応しています。
                     </p>
-                    <div class="toggle-button">
-                        <span class="toggle-button__item"></span>
-                        <img class="close" src="assets/close.svg" alt="crossIcon">
-                    </div>
                 </div>
-                <p class="answer" data-jp="コーポレートサイト、ランディングページ、個人サイトやポートフォリオサイトなどの開発に対応しています。" data-en="I can develop corporate sites, landing pages, personal sites, and portfolio sites.">
-                    コーポレートサイト、ランディングページ、個人サイトやポートフォリオサイトなどの開発に対応しています。
-                </p>
-            </div>
-            <div class="accordion-item">
-                <div class="divider"></div>
-                <div class="question-wrapper">
-                    <p class="question" data-jp="依頼するうえで何か準備するものはありますか。" data-en="a">依頼するうえで何か準備するものはありますか。</p>
-                    <div class="toggle-button">
-                        <span class="toggle-button__item"></span>
-                        <img class="close" src="assets/close.svg" alt="crossIcon">
+                <div class="accordion-item">
+                    <div class="divider"></div>
+                    <div class="question-wrapper">
+                        <p class="question" data-jp="依頼するうえで何か準備するものはありますか。" data-en="a">依頼するうえで何か準備するものはありますか。</p>
+                        <div class="toggle-button">
+                            <span class="toggle-button__item"></span>
+                            <img class="close" src="assets/close.svg" alt="crossIcon">
+                        </div>
                     </div>
+                    <p class="answer" data-jp="コーポレートサイト、ECサイト、LP（ランディングページ）、Webアプリなど、目的に応じた開発が可能です。" data-en="a">
+                        サイト内に入れる文章や画像などがございましたら、事前にご提供いただけるとスムーズに進めると思います！特に画像はWebサイトのデザインやイメージに大きく影響を与えるので
+                        フリー素材ではなくオリジナルの画像を使うことをオススメします！
+                    </p>
                 </div>
-                <p class="answer" data-jp="コーポレートサイト、ECサイト、LP（ランディングページ）、Webアプリなど、目的に応じた開発が可能です。" data-en="a">
-                    サイト内に入れる文章や画像などがございましたら、事前にご提供いただけるとスムーズに進めると思います！特に画像はWebサイトのデザインやイメージに大きく影響を与えるので
-                    フリー素材ではなくオリジナルの画像を使うことをオススメします！
-                </p>
-            </div>
-            <div class="accordion-item">
-                <div class="divider"></div>
-                <div class="question-wrapper">
-                    <p class="question" data-jp="料金はどのようになっていますか。" data-en="a">料金はどのようになっていますか。</p>
-                    <div class="toggle-button">
-                        <span class="toggle-button__item"></span>
-                        <img class="close" src="assets/close.svg" alt="crossIcon">
+                <div class="accordion-item">
+                    <div class="divider"></div>
+                    <div class="question-wrapper">
+                        <p class="question" data-jp="料金はどのようになっていますか。" data-en="a">料金はどのようになっていますか。</p>
+                        <div class="toggle-button">
+                            <span class="toggle-button__item"></span>
+                            <img class="close" src="assets/close.svg" alt="crossIcon">
+                        </div>
                     </div>
+                    <p class="answer" data-jp="目安としては、トップページ1ページあたりデザイン+コーディングで10万円～、下層ページは1ページ5万円～です。実際に実装する機能や開発する
+                    サイトによって上下しますので、お気軽にお問い合わせください。" data-en="a">
+                        目安としては、トップページ1ページあたりデザイン+コーディングで10万円～、下層ページは1ページ5万円～です。実装する機能や開発する
+                        サイトによって上下しますので、お気軽にお問い合わせください。
+                    </p>
                 </div>
-                <p class="answer" data-jp="目安としては、トップページ1ページあたりデザイン+コーディングで10万円～、下層ページは1ページ5万円～です。実際に実装する機能や開発する
-                サイトによって上下しますので、お気軽にお問い合わせください。" data-en="a">
-                    目安としては、トップページ1ページあたりデザイン+コーディングで10万円～、下層ページは1ページ5万円～です。実装する機能や開発する
-                    サイトによって上下しますので、お気軽にお問い合わせください。
-                </p>
-            </div>
-            <div class="accordion-item">
-                <div class="divider"></div>
-                <div class="question-wrapper">
-                    <p class="question" data-jp="納期はどのくらいかかりますか。" data-en="a">納期はどのくらいかかりますか。</p>
-                    <div class="toggle-button">
-                        <span class="toggle-button__item"></span>
-                        <img class="close" src="assets/close.svg" alt="crossIcon">
+                <div class="accordion-item">
+                    <div class="divider"></div>
+                    <div class="question-wrapper">
+                        <p class="question" data-jp="納期はどのくらいかかりますか。" data-en="a">納期はどのくらいかかりますか。</p>
+                        <div class="toggle-button">
+                            <span class="toggle-button__item"></span>
+                            <img class="close" src="assets/close.svg" alt="crossIcon">
+                        </div>
                     </div>
+                    <p class="answer" data-jp="コーポレートサイト、ECサイト、LP（ランディングページ）、Webアプリなど、目的に応じた開発が可能です。" data-en="a">
+                        コーポレートサイト、ECサイト、LP（ランディングページ）、Webアプリなど、目的に応じた開発が可能です。
+                    </p>
                 </div>
-                <p class="answer" data-jp="コーポレートサイト、ECサイト、LP（ランディングページ）、Webアプリなど、目的に応じた開発が可能です。" data-en="a">
-                    コーポレートサイト、ECサイト、LP（ランディングページ）、Webアプリなど、目的に応じた開発が可能です。
-                </p>
-            </div>
-            <div class="accordion-item">
-                <div class="divider"></div>
-                <div class="question-wrapper">
-                    <p class="question" data-jp="納品後のサポートはありますか。" data-en="a">納品後のサポートはありますか。</p>
-                    <div class="toggle-button">
-                        <span class="toggle-button__item"></span>
-                        <img class="close" src="assets/close.svg" alt="crossIcon">
+                <div class="accordion-item">
+                    <div class="divider"></div>
+                    <div class="question-wrapper">
+                        <p class="question" data-jp="納品後のサポートはありますか。" data-en="a">納品後のサポートはありますか。</p>
+                        <div class="toggle-button">
+                            <span class="toggle-button__item"></span>
+                            <img class="close" src="assets/close.svg" alt="crossIcon">
+                        </div>
                     </div>
+                    <p class="answer" data-jp="はい可能です！サイトのメンテナンスや追加ページの作成などご希望があれば対応させていただきます。" data-en="a">
+                        はい可能です！サイトのメンテナンスや追加ページの作成などご希望があれば対応させていただきます。
+                    </p>
                 </div>
-                <p class="answer" data-jp="はい可能です！サイトのメンテナンスや追加ページの作成などご希望があれば対応させていただきます。" data-en="a">
-                    はい可能です！サイトのメンテナンスや追加ページの作成などご希望があれば対応させていただきます。
-                </p>
             </div>
         </div>
     </section>

@@ -38,6 +38,11 @@ body {
     background-color: #FEFBF6;
 }
 
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 .header {
     width: 100%;
     display: flex;
@@ -309,54 +314,23 @@ body {
 
 .section {
     padding: 0 20px;
-    margin-bottom: 64px;
 
     @include respond-to("large") {
-        margin-bottom: 196px;
         padding: 0 80px;
-    }
-
-    &__title {
-        @include Inter(500, 28px);
-        margin-bottom: 24px;
-        text-transform: uppercase;
-
-        @include respond-to("large") {
-            font-size: 48px;
-            line-height: 120%;
-        }
-    }
-
-    &__subtitle {
-        @include Inter(400, 24px);
-        text-transform: uppercase;
-
-        @include respond-to("large") {
-            @include Inter(400, 32px);
-        }
-    }
-
-    &__text {
-        @include Noto(400, 16px);
-        line-height: 150%;
-
-        &--en {
-            @include Inter(400, 14px);
-            color: #9e9e9e;
-        }
     }
 }
 
 .service {
     margin-bottom: 128px;
-    max-width: 1280px;
-
-    @include respond-to("medium") {
-        margin: 0 auto 128px;
-    }
 
     @include respond-to("large") {
-        margin: 0 auto 196px;
+        margin-bottom: 196px;
+    }
+
+    &__wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     .flex-wrapper-pc {
@@ -378,10 +352,13 @@ body {
     }
 
     &__title {
-        margin-bottom: 96px; 
+        @include Inter(500, 32px);
+        margin-bottom: 96px;
+        text-transform: uppercase;
 
         @include respond-to("large") {
             margin-bottom: 160px;
+            font-size: 60px;
         }
     }
 
@@ -429,126 +406,123 @@ body {
 
 .about {
     width: 100%;
-    background-color: #202020;
-    padding: 56px 20px;
-    border-radius: 40px;
     margin-bottom: 128px;
 
-    @include respond-to("medium") {
-        margin: 0 auto 196px;
-        max-width: 1280px;
-        padding: 56px 80px;
+    @include respond-to("large") {
+        margin-bottom: 196px;
     }
 
-    .flex-wrapper-pc {
-
-        @include respond-to("large") {
-            max-width: 1280px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    &__wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     &__title {
-        margin-bottom: 24px;
+        @include Inter(500, 32px);
+        color: #202020;
+        margin-bottom: 96px;
         text-transform: uppercase;
-        color: #ffffff;
 
         @include respond-to("large") {
-            margin-bottom: 0;
+           font-size: 60px;
+           margin-bottom: 128px;
         }
     }
 
-    .flex-container {
-        display: flex;
-        flex-direction: column;
+    &__text {
+        @include Inter(400, 16px);
+        color: #202020;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        line-height: 180%;
+        margin-bottom: 32px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        @include respond-to("medium") {
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+
+    }
+
+    &__link {
+        @include Inter(500, 16px);
+        color: #202020;
         gap: 16px;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        align-self: end;
+        margin-top: 64px;
+
+        @include respond-to("medium") {
+            grid-column-start: 10;
+            grid-column-end: 13;
+            text-align: end;
+            margin-top: 0;
+            justify-content: flex-end;
+        }
 
         @include respond-to("large") {
-            width: 50%;
-            gap: 24px;
-        }
+            transform: translateX(0);
+            transition: transform 0.4s ease-in-out;
+            cursor: pointer;
 
-        &__text--jp {
-            @include Noto(300, 14px);
-            line-height: 200%;
-            color: #ffffff;
-
-            @include respond-to("large") {
-                font-size: 16px;
+            &:hover {
+                transform: translateX(20px);
             }
         }
 
-        &__text--en {
-            @include Inter(300, 14px);
-            color: #ffffff;
-            line-height: 200%;
-            text-transform: uppercase;
+    }
 
-            @include respond-to("large") {
-                font-size: 16px;
-            }
-        }
 
-        &__link {
-            @include Inter(400, 14px);
-            color: #ffffff;
-            text-transform: uppercase;
 
-            @include respond-to("large") {
-                font-size: 18px;
-            }
-        }
+    &__bio {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
 
-        &__email {
-            @include Inter(400, 14px);
-            color: #ffffff;
-            text-transform: uppercase;
-
-            @include respond-to("large") {
-                font-size: 18px;
-            }
+        @include respond-to("medium") {
+            grid-template-columns: repeat(12, 1fr);
         }
     }
 }
 
 .qna {
-    padding: 0 20px;
     margin-bottom: 128px;
 
-    @include respond-to("medium") {
-        padding: 0 80px;
-        margin: 0 auto 196px;
-        max-width: 1280px;
+    @include respond-to("large") {
+        margin-bottom: 196px;
+    }
+
+    &__wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     .flex-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        @include respond-to("large") {
-            max-width: 1280px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+        margin-bottom: 32px;
     }
 
     &__title {
-        padding: 0 20px;
+        @include Inter(500, 32px);
+        text-transform: uppercase;
 
         @include respond-to("large") {
-            margin-bottom: 48px;
+            font-size: 60px;
         }
     }
 
     .language-switch {
         display: flex;
         cursor: pointer;
+        align-self: end;
 
         .lang-option {
             cursor: pointer;
