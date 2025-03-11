@@ -203,7 +203,7 @@ body {
 @media (min-width: 1024px) {
   .hero {
     max-width: 1280px;
-    margin: 160px auto;
+    margin: 160px auto 240px auto;
   }
 }
 @media (min-width: 1024px) {
@@ -309,7 +309,7 @@ body {
 }
 @media (min-width: 1024px) {
   .service .flex-wrapper-pc:first-child {
-    margin-bottom: 240px;
+    margin-bottom: 160px;
   }
 }
 @media (min-width: 1024px) {
