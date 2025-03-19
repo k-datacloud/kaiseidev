@@ -259,9 +259,9 @@ body {
             width: 52%;
         }
 
-        &--bold {
-            font-weight: 500;
-        }
+        // &--bold {
+        //     font-weight: 600;
+        // }
 
         @include respond-to("large") {
             font-size: 32px;
@@ -624,7 +624,7 @@ body {
 
     .question--en {
         @include Inter(400, 16px);
-        letter-spacing: 0;
+        letter-spacing: .4px;
         text-align: start;
 
     }
@@ -652,7 +652,7 @@ body {
 
     .answer--en {
         @include Inter(400, 16px);
-        letter-spacing: 0;
+        letter-spacing: .4px;
         text-align: start;
     }
 

@@ -229,9 +229,6 @@ body {
     width: 52%;
   }
 }
-.hero__title--bold {
-  font-weight: 500;
-}
 @media (min-width: 1024px) {
   .hero__title {
     font-size: 32px;
@@ -622,7 +619,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: #202020;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   text-align: start;
 }
 .qna .scale {
@@ -656,7 +653,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: #202020;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   text-align: start;
 }
 .qna .showText {
