@@ -169,29 +169,35 @@ body {
             display: flex;
             gap: 32px;
 
-            .menu-link {
-                @include Inter(500, 18px);
-                text-transform: uppercase;
+            .link__inner {
                 position: relative;
-
-                &:after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    bottom: -10px;
-                    width: 105%;
-                    height: 1px;
-                    background-color: #202020;
-                    transform: scaleX(0);
-                    transform-origin: left;
-                    transition: transform 0.3s ease-in-out;
-                }
-
-                &:hover:after {
-                    transform: scaleX(1);
-                    transition: transform 0.3s ease-in-out;
-                }
+                overflow: hidden;
             }
+
+            .menu-link {
+                @include Inter(500, 16px);
+                text-transform: uppercase;
+                transition: transform 0.3s;
+                display: block;
+            }
+
+            .hover-link {
+                position: absolute;
+                left: 0;
+                top: 100%;
+                @include Inter(500, 16px);
+                text-transform: uppercase;
+                transition: top 0.3s;
+            }
+
+            .link__inner:hover .menu-link {
+                transform: translateY(-100%);
+            }
+
+            .link__inner:hover .hover-link {
+                top: 0;
+            }
+
         }
     }
 

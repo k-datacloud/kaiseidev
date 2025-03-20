@@ -138,30 +138,37 @@ body {
     display: flex;
     gap: 32px;
   }
+  .header__menu--pc .link__inner {
+    position: relative;
+    overflow: hidden;
+  }
   .header__menu--pc .menu-link {
     font-family: "Inter", serif;
     font-optical-sizing: auto;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     color: #202020;
     text-transform: uppercase;
-    position: relative;
+    transition: transform 0.3s;
+    display: block;
   }
-  .header__menu--pc .menu-link:after {
-    content: "";
+  .header__menu--pc .hover-link {
     position: absolute;
     left: 0;
-    bottom: -10px;
-    width: 105%;
-    height: 1px;
-    background-color: #202020;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease-in-out;
+    top: 100%;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 16px;
+    color: #202020;
+    text-transform: uppercase;
+    transition: top 0.3s;
   }
-  .header__menu--pc .menu-link:hover:after {
-    transform: scaleX(1);
-    transition: transform 0.3s ease-in-out;
+  .header__menu--pc .link__inner:hover .menu-link {
+    transform: translateY(-100%);
+  }
+  .header__menu--pc .link__inner:hover .hover-link {
+    top: 0;
   }
 }
 .header .fade-in {
